@@ -1,5 +1,5 @@
 let result = document.querySelector('.results');
-result.style.display="none";
+// result.style.display="none";
 var mainBox = document.getElementById('box-container');
 
 // making boxes
@@ -13,10 +13,9 @@ var mainBox = document.getElementById('box-container');
 let boxes = document.getElementsByClassName('box'); 
 
 // random number genrator
-function randomNumber(){
-    return Math.floor(Math.random()*2);
-}
-let count = randomNumber() ;
+// function randomNumber(){
+//     return Math.floor(Math.random()*2);
+// }
 
 // winning function
 
@@ -34,12 +33,13 @@ const checkWin = ( )=>{
     win.forEach(e=>{
         if((boxes[e[0]].innerText===boxes[e[1]].innerText) && (boxes[e[2]].innerText===boxes[e[1]].innerText) && (boxes[e[0]].innerText !== "")){
             document.getElementById('win').innerText = boxes[e[0]].innerText + " won"
-            result.style.display="inline"
+            // result.style.display="inline"
         }
     })
 }
 
 //reset function on click
+let count = 0 ;
 
 let reset = document.getElementById("reset")
 reset.addEventListener('click', ()=>{
@@ -47,13 +47,9 @@ reset.addEventListener('click', ()=>{
     Array.from(boxes).forEach((element)=>{
         element.innerText = ""
     }) 
-    result.style.display = "none"
+    document.getElementById('win').innerText=""; 
+    count=0;
 })
-
-
-
-
-
 
 
 // printing values in boxes
