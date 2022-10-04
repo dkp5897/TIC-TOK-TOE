@@ -10,11 +10,20 @@
     height: 450px;
     display: flex;
     margin: auto;
+    /* justify-content: center; */
     position: absolute;
     top: 0;bottom: 0;left: 0;right: 0;
-    
 }
-
+h1{
+    color: rgb(223, 80, 18);
+    text-align: center;
+    margin: 50px auto;
+    background-color: blue;
+    width: 250px;
+    height: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 4px 2px;
+}
 .container{
     margin: auto;
     display: flex;

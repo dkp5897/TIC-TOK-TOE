@@ -19,6 +19,7 @@ function randomNumber(){
 let count = randomNumber() ;
 
 // winning function
+
 const checkWin = ( )=>{
     let win = [
         [0,1,2],
@@ -50,17 +51,24 @@ reset.addEventListener('click', ()=>{
 })
 
 
+
+
+
+
+
 // printing values in boxes
 mainBox.addEventListener('click',function(event){
     if(document.getElementById(event.target.id).innerHTML==''){
         if(count%2==0){
             document.getElementById(event.target.id).innerHTML='0';
+            
         }else{
             document.getElementById(event.target.id).innerHTML='X';
+           
         }
         count++;
         checkWin();
     }
     
 })
-console.log(arr);
+
