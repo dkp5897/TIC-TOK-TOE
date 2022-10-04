@@ -12,11 +12,6 @@ var mainBox = document.getElementById('box-container');
 
 let boxes = document.getElementsByClassName('box'); 
 
-// random number genrator
-// function randomNumber(){
-//     return Math.floor(Math.random()*2);
-// }
-
 // winning function
 
 const checkWin = ( )=>{
@@ -38,19 +33,7 @@ const checkWin = ( )=>{
     })
 }
 
-//reset function on click
 let count = 0 ;
-
-let reset = document.getElementById("reset")
-reset.addEventListener('click', ()=>{
-    // console.log(Array.from(boxes) );
-    Array.from(boxes).forEach((element)=>{
-        element.innerText = ""
-    }) 
-    document.getElementById('win').innerText=""; 
-    count=0;
-})
-
 
 // printing values in boxes
 mainBox.addEventListener('click',function(event){
@@ -66,5 +49,17 @@ mainBox.addEventListener('click',function(event){
         checkWin();
     }
     
+})
+
+
+//reset function on click
+let reset = document.getElementById("reset")
+reset.addEventListener('click', ()=>{
+    // console.log(Array.from(boxes) );
+    Array.from(boxes).forEach((element)=>{
+        element.innerText = ""
+    }) 
+    document.getElementById('win').innerText=""; 
+    count=0;
 })
 
