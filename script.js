@@ -33,7 +33,7 @@ const checkWin = ( )=>{
     ]
     win.forEach(e=>{
         if((boxes[e[0]].innerText===boxes[e[1]].innerText) && (boxes[e[2]].innerText===boxes[e[1]].innerText) && (boxes[e[0]].innerText !== "")){
-            document.getElementById('win').innerText = boxes[e[0]].innerText + " win"
+            document.getElementById('win').innerText = boxes[e[0]].innerText + " won"
             result.style.display="inline"
         }
     })
